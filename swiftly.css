@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body 
+{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #025677;
+  color: #fff;
+}
+.container i
+{
+    cursor: pointer;
+    font-size: 20px;
+}
+.container img
+{
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.left
+{
+    width: 240px;
+    margin-top: -77%;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    height: 1800px;
+    padding-left: 10px;
+    
+}
+.left img
+{
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.left ul
+{
+    margin-top: 40px;
+}
+.left ul li
+{
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 8px;
+    
+}
+.left:hover
+{
+     overflow-y: scroll;
+    float: left;
+    
+}
+.left ul li:hover {
+    background: #555;
+}
+.right
+{
+    margin-left: 14%;
+    margin-top: 1%;
+}
+.right ul
+{
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.right li {
+  float: left;
+}
+
+.right li button {
+  display: block;
+  width: 170px;
+    background: #555;
+    color: white;
+    font-weight: 600;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 30px;
+    border: none;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+li button:hover
+{
+    background: black;
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+
+.social img
+{
+    width: 230px;
+    height: 230px;
+    transition: transform .2s;
+    margin-top: 2%;
+    margin-left: 30px;
+       border-radius: 10px;
+}
+.news img
+{
+    width: 230px;
+    height: 230px;
+    transition: transform .2s;
+    margin-top: 2%;
+    margin-left: 30px;
+       border-radius: 10px;
+}
+.education img
+{
+    width: 230px;
+    height: 230px;
+    transition: transform .2s;
+    margin-top: 2%;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.music img
+{
+    width: 180px;
+    height: 180px;
+    
+    transition: transform .2s;
+    margin-top: 2%;
+    margin-left: 70px;
+    border-radius: 25px;
+}
+.social img:hover
+{
+    transform: scale(1.2);
+}
+.news h1
+{
+    margin-top: 10px;
+    font-size: 25px;
+}
+.education h1
+{
+    margin-top: 10px;
+    font-size: 25px;
+}
+.music h1
+{
+    margin-top: 10px;
+    font-size: 25px;
+}
+.music img:hover
+{
+    transform: scale(1.2);
+}
+.news img:hover
+{
+    transform: scale(1.2);
+}
+.education img:hover
+{
+    transform: scale(1.2);
+}
+#speechToText:hover{
+    background-color: red;
+    transform: scale(1.2);
+}
+#searchbar{
+     margin-left: 15%;
+     padding:15px;
+     border-radius: 10px;
+   }
+ 
+   input[type=text] {
+      width: 30%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   /* When the input field gets focus,
+        change its width to 100% */
+   input[type=text]:focus {
+     width: 70%;
+   }
+ 
+  #list{
+    font-size:  1.5em;
+    margin-left: 90px;
+   }
+ 
+.item
+{
+   display: list-item;    
+}
+.submenu-wrapper
+{
+    position: absolute;
+    top: 7%;
+    right: 0%;
+    width: 400px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    
+}
+.submenu-wrapper.openMenu
+{
+    max-height: 700px;
+}
+.submenu
+{
+    background-color:#fff;
+    padding: 1rem;
+    margin: 10px;
+    border-radius: 5px;
+    
+}
+.submenu-link
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #444;
+    margin: 12px 0;   
+}
+.submenu hr
+{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    margin: 15px 0 10px;
+    background-color: #ccc;
+}
+.submenu-link
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #444;
+    margin: 12px 0;
+    
+}
+.user-pic
+{
+    cursor: pointer;
+}
+.user-info 
+{
+    display: flex;
+    align-items: center;
+}
+.user-info h2
+{
+    font-weight: 700;
+    color: black;
+}
+
+.user-info img
+{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    
+}
+.submenu-link p
+{
+    width: 100%;
+    transition: 0.2s;
+}
+.submenu-link span
+{
+    font-size: 22px;
+    color: #333;
+}
+.submenu-link:hover span
+{
+    transform: translateX(5px);
+}
+.submenu-link:hover p
+{
+    font-weight: 600;
+     transform: translateX(10px);
+}
+
+

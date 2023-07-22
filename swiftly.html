@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+<head>
+    <title>swiftly.com</title>
+    <script src="https://kit.fontawesome.com/eb2f594bbf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="swiftly.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body style="background-color:#404040">
+    <div class="container" style="font-size: 23px;background-color: #282828;padding: 20px;font-size: 18px">
+        <i class="fa-solid fa-bars" style="color: white"></i>
+        
+        <img src="swiftly.png" style="width: 200px;height:50px;margin-left: 2%;font-size: 18px">
+        
+        <input type="search" onkeyup="search" id="searchbar" placeholder="Search" style="width: 450px; height: 40px; margin-left: 20%;font-size: 18px;margin-top:1%;padding-left: 15px">
+        
+       <i class="fa-solid fa-magnifying-glass" style="color: white;margin-left: 2%;font-size: 18px"></i>
+        
+        <i class="fa-solid fa-microphone" id="speechToText" onclick=record() style="color: white;margin-left: 1%;border-radius: 50px;padding: 8px"></i>
+        
+        <i class="fa-solid fa-video" style="color: white; margin-left: 28%;font-size: 18px"></i>
+        
+        <i class="fa-solid fa-bell" style="color: white;margin-left: 1%;font-size: 18px"></i>
+        <img src="dhanu.jpeg" alt="" class="user-pic" onclick="toggleMenu()">
+        
+        <!--<i class="fa-solid fa-user" style="color: white;margin-left: 1%;font-size: 18px"></i> -->
+        
+    </div>
+    
+    <script>
+        function record()
+        {
+            var recognition=new webkitSpeechRecognition();
+            recognition.lang='en-GB';
+            recognition.onresult=function(event)
+            {
+                console.log(event);
+            }
+            recognition.start();
+            
+        }
+    </script>
+    
+    <script>
+        function search()
+        {
+             let input = document.getElementById('searchbar').value
+                input=input.toLowerCase();
+                let x = document.getElementsByClassName('search');
+      
+                for (i = 0; i < x.length; i++) 
+                { 
+                    if (!x[i].innerHTML.toLowerCase().includes(input)) 
+                    {
+                        x[i].style.display="none";
+                    }
+                    else 
+                    {
+                        x[i].style.display="list-item";                 
+                    }
+                }
+        }
+    </script>
+    
+    <div class="right">
+        <ul>
+            <li class="item"><button>All</button></li>
+            <li><button>Mixes</button></li>
+             <li><button>Music</button></li>
+             <li><button>Comedy</button></li>
+            <li><button>Apna College</button></li>
+            
+             <li><button>Live</button></li>
+             <li><button>Gaming</button></li>
+             <li><button>Recently Uploaded</button></li>
+             <li><button>Love Songs</button></li>
+             
+        </ul>
+        
+        <div class="social">
+            <a href="https://www.netflix.com/"><img src="netflix.png"></a>
+            <a href="https://www.primevideo.com/"><img src="prime1.png"></a>
+            <a href="https://www.hotstar.com/"><img src="hotstar.png"></a>
+            <a href="https://www.sonyliv.com/"><img src="sony1.jpg"></a>
+            <a href="https://www.zee5.com/"><img src="zee51.jpg"></a>
+            <a href="https://www.youtube.com/"><img src="youtube.png"></a>
+            
+            
+        </div>
+       
+        
+        <div class="news">
+             <h1>News</h1><hr>
+            <a href="https://www.ndtv.com/video/live/channel/ndtv24x7"><img src="ndtv.png"></a>
+            <a href="https://timesofindia.indiatimes.com/defaultinterstitial.cms?from=mdr"><img src="times.png"></a>
+            <a href="https://marathi.abplive.com/live-tv"><img src="abp.png"></a>
+            <a href="https://www.saamtv.com/live-tv"><img src="sam.png"></a>
+            <a href="https://www.indiatvnews.com/livetv"><img src="india.png"></a>
+            <a href="https://edition.cnn.com/"><img src="cnn.png"></a>
+        
+        </div>
+        
+         <div class="education">
+             <h1>Education</h1><hr>
+            <a href="https://in.coursera.org"><img src="coursera.png"></a>
+            <a href="https://www.skillshare.com"><img src="skillshare.jpg"></a>
+            <a href="https://www.udacity.com"><img src="udacity.jpg"></a><br>
+            <a href="https://www.udemy.com"><img src="udemy.png"></a>
+            <a href="https://byjus.com"><img src="byjus.png"></a>
+            <a href="https://www.vedantu.com"><img src="vedantu.png"></a>
+             
+              <embed style="width: 740px; border-radius: 20px; margin-top: -230px; margin-left: 50px; height: 500px;" src="https://www.youtube.com/embed/k0MPgBpfoe0">
+        
+        </div>
+        
+        <div class="music">
+             <h1>Music</h1><hr>
+           <a href="https://open.spotify.com"><img src="sp.png"></a>
+            <a href="https://wynk.in/music"><img src="wynk.png"></a>
+            <a href="https://www.jiosaavn.com"><img src="savan.png"></a>
+            <a href="https://music.apple.com/us/browse"><img src="app.png"></a>
+            <a href="https://gaana.com/playlist/anshudhivare-dgdhx-gaanamusic"><img src="gaana.jpg"></a>
+            <a href="https://music.youtube.com/browse/FEmusic_language_selection"><img src="yt.jpg"></a>
+        
+        </div>
+    </div>
+    
+    <div class="submenu-wrapper" id="subMenu">
+        <div class="submenu">
+            <div class="user-info">
+                <img src="dhanu.jpeg" alt="">
+                <h2>Dhananjay Mane</h2><br>
+            </div>
+            <hr>
+            <a href="#" class="submenu-link">
+                <i class="fa-solid fa-user"></i><p>  Your Channel</p>
+                <span></span>
+            </a>
+            
+            <a href="#" class="submenu-link">
+                <i class="fa-solid fa-toggle-on"></i><p>    Switch Account</p>
+                <span></span>
+            </a>
+            
+            <a href="#" class="submenu-link">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <p>  Sign Out</p>
+                <span></span>
+            </a>
+            <hr>
+            
+            <a href="#" class="submenu-link">
+                <i class="fa-solid fa-language"></i>
+                <p>  Language:English</p>
+                <span></span>
+            </a>
+            
+            <a href="#" class="submenu-link">
+                <i class="fa-light fa-money-bill-transfer"></i>
+                <p>  Restricted Mode:Off</p>
+                <span></span>
+            </a>
+            
+            <a href="#" class="submenu-link">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>  Location:India</p>
+                <span></span>
+            </a>
+            <hr>
+            
+            <a href="#" class="submenu-link">
+                <i class="fa-solid fa-gears"></i>
+                <p>  Settings</p>
+                <span></span>
+            </a>
+            <hr>
+            
+            <a href="#" class="submenu-link">
+               <i class="fa-solid fa-circle-info"></i>
+                <p>  Help</p>
+                <span></span>
+            </a>
+            
+            <a href="#" class="submenu-link">
+                <i class="fa-solid fa-comment"></i>
+                <p>  Send Feedback</p>
+                <span></span>
+            </a>
+            
+        </div>
+
+    
+        
+        <script>
+            let submenu=document.getElementById("subMenu");
+            
+            function toggleMenu()
+            {
+                submenu.classList.toggle("openMenu");
+            }
+        
+        </script>
+        
+    </div>
+    
+   
+    
+    <div class="left">
+        <ul>
+            <li><i class="fa-solid fa-house"></i>  Home<br></li>
+            <li><i class="fa-brands fa-internet-explorer"></i>  Explore<br></li>
+            <li><i class="fa-solid fa-subscript"></i>  Subscription</li><br><br><br><hr>
+            
+            <br><br><li><i class="fa-sharp fa-solid fa-bookmark"></i>  Library<br></li>
+            <li><i class="fa-regular fa-clipboard"></i> History<br></li>
+            <li><i class="fa-solid fa-photo-film"></i>  Your Videos<br></li>
+            <li><i class="fa-sharp fa-solid fa-clock-rotate-left"></i>  Watch Later</li><br><br><hr>
+            
+            <br><br><li><i class="fa-sharp fa-solid fa-film"></i>  Movies<br></li>
+            <li><i class="fa-solid fa-headset"></i> Gaming<br></li>
+            <li><i class="fa-sharp fa-solid fa-star-of-life"></i>  Live<br></li>
+            <li><i class="fa-solid fa-baseball"></i>  Sports<br></li>
+            <li><i class="fa-sharp fa-solid fa-laptop-file"></i>  Learning</li><br><br><hr>
+            
+            <br><br><li><i class="fa-solid fa-headset"></i>  Music<br></li>
+            <li><a href="https://open.spotify.com/playlist/2oKgQmWLlAgCqw0YD8SvEg"><img src="mich.jpg"></a> Jackson<br></li>
+            <li><a href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO2uagOI"><img src="kk.png"></a>  KK<br></li>
+            <li><a href="https://www.jiosaavn.com/artist/shreya-ghoshal/lIHlwHaxTZ0_"><img src="shreya.png"></a>  Shreya Ghoshal<br></li>
+            <li><a href="https://www.jiosaavn.com/artist/arijit-singh/LlRWpHzy3Hk_"><img src="ar.jpg"></a> Arijit Singh<br>
+            <li><a href="https://gaana.com/artist/justin-bieber"><img src="justin.png"></a> Justin Bieber<br></li>
+            <li><a href="https://music.apple.com/us/artist/a-r-rahman/3249567"><img src="ar.png"></a>  AR Rehman<br></li>
+            <li><a href="https://music.apple.com/us/artist/the-weeknd/479756766"><img src="week.jpeg"></a>  The Weekend<br></li>
+            <li><a href="https://wynk.in/music/artist/tulsi-kumar/wa_1ca24820?q=tulsi+"><img src="tulsi.png"></a>  Tulsi Kumar<br></li>
+            <li><a href="https://wynk.in/music/artist/atif-aslam/wa_84446599?q=atif+aslam"><img src="atif.jpg"></a>  Atif Aslam</li><br><br><hr>
+        
+        </ul>
+    
+    </div>
+  
+</body>
+</html> 
